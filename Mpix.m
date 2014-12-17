@@ -35,17 +35,17 @@ function [pix_dim] = Mpix(filename, corners)
 % LAST UPDATE:         
 %   December 16, 2014
 %--------------------------------------------------------------------------
-if nargin < 2
-    corners = 300;
-end
-raw = imread(filename);
-bw_avg = rgb2gray(raw);
-canny_bw = edge(bw_avg, 'canny');
-cor = corner(canny_bw, corners);
-d = getMinDist(cor);
-bins = ceil(2/3*corners);
-h = histogram(d, bins);
-hist_width = get(h, 'BinWidth');
-hist_vals = get(h, 'Values');
-pix_dim = hist_width*find(hist_vals == max(hist_vals), 1);
+    if nargin < 2
+        corners = 300;
+    end
+    raw = imread(filename);
+    bw_avg = rgb2gray(raw);
+    canny_bw = edge(bw_avg, 'canny');
+    cor = corner(canny_bw, corners);
+    d = getMinDist(cor);
+    bins = ceil(2/3*corners);
+    h = histogram(d, bins);
+    hist_width = get(h, 'BinWidth');
+    hist_vals = get(h, 'Values');
+    pix_dim = hist_width*find(hist_vals == max(hist_vals), 1);
 end
