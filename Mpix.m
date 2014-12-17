@@ -48,4 +48,9 @@ function [pix_dim] = Mpix(filename, corners)
     hist_width = get(h, 'BinWidth');
     hist_vals = get(h, 'Values');
     pix_dim = hist_width*find(hist_vals == max(hist_vals), 1);
+    
+    % If to big, cut off top and bottom 10%
+    if pix_dim < 15
+        pix_dim = hist_width*find(hist_vals(floor(bins/10):end) == max(hist_vals(floor(bins/10):end)), 1);
+    end
 end
