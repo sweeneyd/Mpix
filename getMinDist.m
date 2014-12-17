@@ -1,10 +1,10 @@
 function [ dists ] = getMinDist(cor)
 %% ------------------------------------------------------------------------
 % FUNCTION:
-%   Mpix()
+%   getMinDist()
 %
 % SYNTAX:       
-%   pix_dim = Mpix(example.jpg, corners)
+%   dists = getMinDist(cor)
 %               
 % INPUTS: 
 %   cor     is the list of x and y values of the corners the corner()
@@ -16,8 +16,8 @@ function [ dists ] = getMinDist(cor)
 %           the nearest neighbor within in the array cor.
 %               
 % DESCRIPTION:  
-%   This function calculates the length of a pixel in a
-%   pixelated image using 
+%   This function finds the distance between a each point in the array cor
+%   and its nearest neighbor
 %              
 % AUTHOR:       
 %   Dan Sweeney
