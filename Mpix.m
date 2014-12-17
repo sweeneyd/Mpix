@@ -21,7 +21,8 @@ function [pix_dim] = Mpix(filename, corners)
 %   and will be nowhere as accurate as the original measurements.)
 %               
 % OUTPUTS:      
-%   pix_dim is the mode side length of the original pixel prior to import
+%   pix_dim         is the mode side length of the original pixel prior to 
+%                   import
 %               
 % DESCRIPTION:  
 %   This function calculates the length of a pixel in a
