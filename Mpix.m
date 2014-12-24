@@ -7,11 +7,11 @@ function [pix_dim] = Mpix(filename, corners)
 %   pix_dim = Mpix(example.jpg, corners)
 %               
 % INPUTS: 
-%   example.jpg     is a .jpg image file the poor wretch is tryingto find
+%   example.jpg     is a .jpg image file the poor wretch is trying to find
 %                   the length of the side of a pixel from the original 
-%                   image. example.jpg should be an sufficiently pixelated 
-%                   that has been zoomed too far and resaved as a .jpg, 
-%                   losing scale information. 
+%                   image. example.jpg should be a sufficiently pixelated 
+%                   image that has been zoomed too far and resaved as a 
+%                   .jpg, losing scale information. 
 %
 %   corners         is the number of corners the algorithm will find within 
 %                   the canny edges (corners = 300 by default)
